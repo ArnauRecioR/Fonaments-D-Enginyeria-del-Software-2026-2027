@@ -1,0 +1,348 @@
+###
+# Exercicis - types()
+# Completa els exercicis següents utilitzant la funció type()
+###
+
+# Exercici 1
+# Imprimeix el tipus del número 25
+print(type(25))
+
+# Exercici 2
+# Imprimeix el tipus del text "Hola món"
+print(type("Hola món"))
+
+# Exercici 3
+# Imprimeix el tipus del resultat de la comparació 10 > 5
+print(type(10>5))
+###
+# Exercicis - conversió de tipus (casting)
+# Completa els exercicis següents convertint dades entre tipus.
+###
+
+# Exercici 1
+# Demana a l'usuari quants paquets ha rebut un encaminador. Converteix el valor
+# introduït a un nombre enter, suma-hi 1200 paquets i mostra el total.
+paquets_rebuts=int(input("Quants paquets ha rebut l'encaminador?"))
+total_paquets= paquets_rebuts + 1200
+print(f"Total de paquets: {total_paquets}")
+# Exercici 2
+# Demana a l'usuari la velocitat d'una connexió en Mbps. Converteix el valor
+# introduït a un nombre decimal i calcula la velocitat equivalent en MB/s
+# dividint-la per 8. Mostra el resultat.
+velocitat_mbps= int(input("Velocitat Mbps:"))
+velocitat_mbs= velocitat_mbps / 8
+print(f"Velocitat equivalent: {velocitat_mbs} MB/s")
+
+###
+# Exercicis - variables
+# Completa els exercicis següents creant i utilitzant variables.
+###
+
+# Exercici 1
+# Crea variables per desar el nom d'un encaminador, la seva ubicació,
+# el nombre de ports i si està encès. Mostra les dades en una frase
+# utilitzant una f-string.
+nom_encaminador= "Router Oficina"
+ubicació = "Planta Baixa"
+nombre_ports = 8
+encaminador_engegat = True
+
+print(f"Encaminador: {nom_encaminador}; ubicació: {ubicació};"f" Ports: {nombre_ports}; Engegat: {encaminador_engegat}")
+# Exercici 2
+# Crea variables per desar els GB inclosos en un pla de dades mòbils
+# i els GB consumits. Calcula quants GB queden i mostra el resultat.
+# Després, actualitza el consum amb un valor nou i torna a calcular
+# quants GB queden.
+gb_inclosos = 20
+gb_consumits = 12.5
+gb_restants = gb_inclosos - gb_consumits
+print(f"Dades restants: {gb_restants}")
+
+gb_consumits = 18
+gb_restants = gb_inclosos - gb_consumits
+print(f"Dades restants després de l'actualització: {gb_restants}")
+
+###
+# Exercicis - input()
+# Practica l'entrada de dades i la conversió de tipus amb exemples de telecomunicacions.
+###
+
+# Exercici 1
+# Demana el nom d'un tècnic i el nom de la xarxa que està instal·lant.
+# Després, mostra un missatge amb aquesta informació.
+tècnic = input("Nom del tècnic: ")
+xarxa = input("Preu xarxa: ")
+print(f"{tècnic} està instal·lant la xarxa {xarxa}.")
+
+# Exercici 2
+# Demana la longitud d'un enllaç de fibra en quilòmetres i la velocitat de transmissió
+# en Gbps. Mostra quants segons caldrien per transmetre 1 GB de dades.
+# Suposa que 1 GB = 8 Gb i que la velocitat es manté constant.
+longitud_km = float(input("Longitud enllaç: "))
+velocitat_gbps = float(input("Velocitat Transmissió: "))
+temps = 8 / velocitat_gbps
+print(f"L'enllaç de {longitud_km} km necessita {temps} segons per transmetre 1 GB.")
+
+# Exercici 3
+# Demana el nombre d'hores de feina i el preu per hora d'una instal·lació de xarxa.
+# Demana també el preu del material.
+# Mostra el cost total de la instal·lació.
+hores_feina = float(input("Hores de feina: "))
+preu_hora = float(input("Preu per hora en euros: "))
+preu_material = float(input("Preu del material en euros: "))
+cost_total = hores_feina * preu_hora + preu_material
+print(f"Cost total: {cost_total} euros.")
+
+###
+# EXERCICIS
+###
+
+# Exercici 1: Comparar nombres
+# Donats els nombres:
+# nombre_a = 8
+# nombre_b = 5
+# Mostra el resultat de comparar si nombre_a és més gran, més petit o igual
+# que nombre_b.
+nombre_a = 8
+nombre_b = 5
+print(f"{nombre_a} > {nombre_b}: {nombre_a > nombre_b}")
+print(f"{nombre_a} < {nombre_b}: {nombre_a < nombre_b}")
+print(f"{nombre_a} == {nombre_b}: {nombre_a == nombre_b}")
+
+# Exercici 2: Comparar cadenes de text
+# Donades les cadenes:
+# paraula_a = "Hola"
+# paraula_b = "hola"
+# Mostra si són iguals i si paraula_a és igual a "Hola".
+# Observa si Python distingeix entre majúscules i minúscules.
+paraula_a = "Hola"
+paraula_b = "hola"
+print(f"Les paraules són iguals: {paraula_a == paraula_b}")
+print(f"{paraula_a} és igual a 'Hola': {paraula_a == 'Hola'}")
+
+# Exercici 3: Connexió de xarxa
+# Donats els valors booleans:
+# router_encès = True
+# connexio_activa = False
+# Crea una variable anomenada xarxa_disponible que sigui True només si el
+# router està encès i la connexió està activa. Mostra'n el resultat.
+router_encès = True
+connexio_activa = False
+xarxa_disponible = router_encès and connexio_activa
+print(f"Xarxa disponible: {xarxa_disponible}")
+
+
+# Exercici 4: Avisos pendents
+# Donats els valors booleans:
+# actualitzacio_disponible = False
+# alerta_critica = True
+# Crea una variable anomenada cal_avisar que sigui True si hi ha una
+# actualització disponible o una alerta crítica. Mostra'n el resultat.
+actualitzacio_disponible = False
+alerta_critica = True
+cal_avisar = actualitzacio_disponible or alerta_critica
+print(f"Alerta: {cal_avisar}")
+# Exercici 5: Accés a un compte
+# Donats els valors booleans:
+# compte_actiu = True
+# contrasenya_correcta = True
+# codi_correcte = False
+# dispositiu_de_confiança = True
+# compte_bloquejat = False
+# Crea una variable anomenada accés_permes que sigui True si el compte està
+# actiu, la contrasenya és correcta, el compte no està bloquejat i, a més,
+# el codi és correcte o el dispositiu és de confiança. Fes servir and, or i not.
+# Mostra'n el resultat.
+compte_actiu = True
+contrasenya_correcta = True
+codi_correcte = False
+dispositiu_de_confiança = True
+compte_bloquejat = False
+accés_permes = (compte_actiu and contrasenya_correcta and (codi_correcte or dispositiu_de_confiança) and not compte_bloquejat)
+print(f" Accés Permes: {accés_permes}")
+
+###
+# EXERCICIS
+###
+
+# Exercici 1: El missatge secret
+# Donada la llista següent:
+# missatge = ["C", "o", "d", "i", " ", "s", "e", "c", "r", "e", "t"]
+# Fent servir slicing i concatenació, crea una llista nova que contingui només
+# el missatge "secret".
+missatge = ["C", "o", "d", "i", " ", "s", "e", "c", "r", "e", "t"]
+llista_nova = missatge[5:]
+print(llista_nova)
+
+
+# Exercici 2: Intercanvi de posicions
+# Donada la llista següent:
+# nombres = [10, 20, 30, 40, 50]
+# Intercanvia la primera i l'última posició fent servir només l'assignació per índex.
+nombres = [10, 20, 30, 40, 50]
+nombres[0], nombres[-1] = nombres[-1], nombres[0]
+print(nombres)
+
+
+# Exercici 3: L'entrepà de llistes
+# Donades les llistes següents:
+# pa_de_dalt = ["pa de dalt"]
+# ingredients = ["pernil", "formatge", "tomàquet"]
+# pa_de_sota = ["pa de sota"]
+# Crea una llista anomenada entrepa que contingui, en aquest ordre, el pa de dalt,
+# els ingredients i el pa de sota.
+pa_de_dalt = ["pa de dalt"]
+ingredients = ["pernil", "formatge", "tomàquet"]
+pa_de_sota = ["pa de sota"]
+entrepa = pa_de_dalt + ingredients + pa_de_sota
+print(entrepa)
+
+# Exercici 4: Duplicar una llista
+# Donada una llista:
+# llista = [1, 2, 3]
+# Crea una llista nova que contingui duplicats els elements de la llista original.
+# Exemple: [1, 2, 3] -> [1, 2, 3, 1, 2, 3]
+llista = [1, 2, 3]
+llista_nova = llista + llista
+print(llista_nova)
+
+# Exercici 5: Extreure l'element central
+# Donada una llista amb un nombre senar d'elements, extreu-ne l'element central
+# fent servir slicing.
+# Exemple: llista = [10, 20, 30, 40, 50] -> L'element central és 30
+llista = [10, 20, 30, 40, 50]
+centre = len(llista) // 2
+print(llista[centre])
+
+# Exercici 6: Inversió parcial
+# Donada una llista, inverteix-ne només la primera meitat (fent servir slicing
+# i concatenació).
+# Exemple: llista = [1, 2, 3, 4, 5, 6] -> Resultat: [3, 2, 1, 4, 5, 6]
+llista = [1, 2, 3, 4, 5, 6]
+meitat = len(llista) // 2
+llista_invertida = llista[:meitat][::-1] + llista[meitat:]
+print(llista_invertida)
+
+###
+# EXERCICIS
+# Fes servir, sempre que puguis, els mètodes que has après.
+###
+
+# Exercici 1: Afegir i modificar elements
+# Crea una llista amb els nombres de l'1 al 5.
+# Afegeix-hi el nombre 6 al final fent servir append().
+# Insereix-hi el nombre 10 a la posició 2 fent servir insert().
+# Modifica el primer element de la llista perquè sigui 0.
+llista = [1,2,3,4,5]
+llista.append(6)
+llista.insert(2,10)
+llista[0] = 0
+print(llista)
+
+# Exercici 2: Combinar i buidar llistes
+# Crea dues llistes:
+# llista_a = [1, 2, 3]
+# llista_b = [4, 5, 6, 1, 2]
+# Amplia llista_a amb llista_b fent servir extend().
+# Elimina la primera aparició del nombre 1 de llista_a fent servir remove().
+# Elimina l'element de l'índex 3 de llista_a fent servir pop(). Imprimeix l'element eliminat.
+# Buida completament llista_b fent servir clear().
+llista_a = [1, 2, 3]
+llista_b = [4, 5, 6, 1, 2]
+llista_a.extend(llista_b)
+llista_a.remove(1)
+element_eliminat= llista_a.pop(3)
+print(f"Element eliminat: {element_eliminat}")
+llista_b.clear()
+print("Llista a:", llista_a)
+print("Llista b:", llista_b)
+
+
+# Exercici 3: Slicing i eliminació amb del
+# Crea una llista amb els nombres de l'1 al 10.
+# Fes servir slicing i del per eliminar els elements des de l'índex 2 fins al 5
+# (sense incloure el 5).
+# Imprimeix la llista resultant.
+llista = [1,2,3,4,5,6,7,8,9,10]
+del llista[2:5]
+print(llista)
+
+# Exercici 4: Ordenar i comptar
+# Crea una llista amb els nombres següents: [5, 2, 8, 1, 9, 4, 2].
+# Ordena la llista de manera ascendent fent servir sort().
+# Compta quantes vegades apareix el nombre 2 a la llista fent servir count().
+# Comprova si el nombre 7 és a la llista fent servir in.
+llista = [5, 2, 8, 1, 9, 4, 2]
+llista.short()
+quantitat_dos = llista.count(2)
+el_set = 7 in llista
+print(f"Llista ordenada: {llista}")
+print(f"Quantitat de 2: {quantitat_dos}")
+print(f"Hi ha el set: {el_set}")
+
+
+# Exercici 5: Còpia i referència
+# Crea una llista anomenada original amb els nombres [1, 2, 3].
+# Crea'n una còpia anomenada copia_1 fent servir slicing.
+# Crea'n una altra còpia anomenada copia_2 fent servir copy().
+# Crea una referència a la llista original anomenada referencia.
+# Modifica a 10 el primer element de la llista referencia.
+# Imprimeix les quatre llistes (original, copia_1, copia_2 i referencia) i observa'n els canvis.
+original= [1, 2, 3]
+copia_1 = original[:]
+copia_2 = original.copy()
+referencia = original
+referencia[0] = 10
+print(f"Original= {original}")
+print(f"Copia 1: {copia_1}")
+print(f"Copia 2: {copia_2}")
+print(f"Referencia: {referencia}")
+
+# Exercici 6: Ordenar cadenes sense distingir entre majúscules i minúscules
+# Crea una llista amb les cadenes següents: ["Poma", "pera", "PLÀTAN", "taronja"].
+# Ordena la llista sense distingir entre majúscules i minúscules.
+llista = ["Poma", "pera", "PLÀTAN", "taronja"]
+llista.short(key=str.lower)
+print(llista)
+
+###
+# EXERCICIS (while)
+###
+
+# Exercici 1: Compte enrere
+# Imprimeix els números del 10 a l'1 fent servir un bucle while.
+numero = 10
+while numero >= 1:
+    print(numero)
+    numero -= 1
+
+# Exercici 2: Suma de números parells (while)
+# Calcula la suma dels números parells entre 1 i 20 (inclosos) fent servir un bucle while.
+numero = 1
+suma_parells = 0
+while numero <= 20:
+    if numero %2 == 0:
+        suma_parells += numero
+    numero += 1       
+print(f"La suma dels nombres parells és: {suma_parells}")
+
+# Exercici 3: Factorial d'un número
+# Demana a l'usuari que introdueixi un número enter positiu.
+# Calcula el seu factorial fent servir un bucle while.
+# El factorial d'un número enter positiu és el producte de tots els números de l'1 fins a aquest número. Per exemple, el factorial de 5
+# 5! = 5 x 4 x 3 x 2 x 1 = 120.
+
+# Exercici 4: Validació de contrasenya
+# Demana a l'usuari que introdueixi una contrasenya.
+# La contrasenya ha de tenir almenys 8 caràcters.
+# Fes servir un bucle while per continuar demanant la contrasenya fins que compleixi els requisits.
+# Si la contrasenya és vàlida, imprimeix "Contrasenya vàlida".
+
+# Exercici 5: Taula de multiplicar
+# Demana a l'usuari que introdueixi un número.
+# Imprimeix la taula de multiplicar d'aquest número (de l'1 al 10) fent servir un bucle while.
+
+# Exercici 6: Números primers fins a N
+# Demana a l'usuari que introdueixi un número enter positiu N.
+# Imprimeix tots els números primers menors o iguals que N fent servir un bucle while.
+# Un número és primer si només és divisible per 1 i per ell mateix.
