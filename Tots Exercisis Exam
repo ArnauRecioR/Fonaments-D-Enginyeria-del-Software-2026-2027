@@ -331,6 +331,13 @@ print(f"La suma dels nombres parells és: {suma_parells}")
 # Calcula el seu factorial fent servir un bucle while.
 # El factorial d'un número enter positiu és el producte de tots els números de l'1 fins a aquest número. Per exemple, el factorial de 5
 # 5! = 5 x 4 x 3 x 2 x 1 = 120.
+numero = int(input("Introdueix un número enter positiu: "))
+factorial = 1
+contador = 1
+while contador <= numero:
+    factorial *= contador
+    contador += 1
+print(f"El factorial de {numero} és: {factorial}")  
 
 # Exercici 4: Validació de contrasenya
 # Demana a l'usuari que introdueixi una contrasenya.
@@ -341,6 +348,12 @@ print(f"La suma dels nombres parells és: {suma_parells}")
 # Exercici 5: Taula de multiplicar
 # Demana a l'usuari que introdueixi un número.
 # Imprimeix la taula de multiplicar d'aquest número (de l'1 al 10) fent servir un bucle while.
+numero = int(input("Introdueix un numero"))
+multiplicador = 1
+while numero <= 10:
+    resultat = numero * multiplicador
+    print(f"{numero} x {multiplicador} = {resultat}")
+    multiplicador += 1  
 
 # Exercici 6: Números primers fins a N
 # Demana a l'usuari que introdueixi un número enter positiu N.
