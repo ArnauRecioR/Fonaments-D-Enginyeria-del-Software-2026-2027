@@ -359,3 +359,16 @@ while numero <= 10:
 # Demana a l'usuari que introdueixi un número enter positiu N.
 # Imprimeix tots els números primers menors o iguals que N fent servir un bucle while.
 # Un número és primer si només és divisible per 1 i per ell mateix.
+n = int(input("Introdueix un numero enter positiu N:"))
+num = 2
+while num <= n:
+    es_primer = True
+    divisor = 2
+    while divisor < num:
+        if num % divisor == 0:
+            es_primer = False
+            break
+        divisor += 1
+    if es_primer:
+        print(num)
+    num += 1        
