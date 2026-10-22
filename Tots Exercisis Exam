@@ -363,4 +363,81 @@ n = int(input("Introdueix un numero enter positiu N:"))
 num = 2
 while num <= n:
     es_primer = True
-   
+
+###
+# EXERCICIS
+###
+
+# Exercici 1: Determinar el més gran de dos nombres
+# Demana a l'usuari que introdueixi dos nombres i mostra un missatge
+# que indiqui quin és més gran o si són iguals.
+num = int(input("Introdueix 1r num: "))
+num2 = int(input("Introdueix 1r num: "))
+if num > num2:
+    print(f"{num} > {num2}")
+elif num2 > num:
+    print(f"{num2} > {num}")
+else:
+    print(f"{num} són iguals {num2}")
+
+# Exercici 2: Calculadora senzilla
+# Demana a l'usuari dos nombres i una operació (+, -, *, /).
+# Fes l'operació i mostra'n el resultat (gestiona la divisió per zero).
+num1 = float(input("Introdueix un numer: "))
+num2 = float(input("Introdueix un numer: "))
+operacio = input("Introdueix una operació (+, -, *, /):").strip()
+if operacio == "/" and num2 == 0:
+    print("Error: no es pot dividir per zero.")
+elif operacio == "+":
+    print("Resultat = num1 + num2")
+elif operacio == "-":
+    print("Resultat = num1 - num2")
+elif operacio == "*":
+    print("Resultat = num1 * num2")
+elif operacio == "/":
+    print("Resultat = num1 / num2")
+else:
+    print("Operació no valida.")
+
+
+
+
+# Exercici 12: Accés a un compte de client
+# Demana si el compte està actiu, si la contrasenya és correcta i si el codi
+# de doble verificació és correcte. Demana el codi només si el compte és actiu
+# i la contrasenya és correcta. Indica si l'accés es denega perquè el compte
+# està desactivat, perquè la contrasenya és incorrecta o perquè falla el codi;
+# si totes les comprovacions necessàries són correctes, permet l'accés.
+compte_actiu = input("Digues si està actiu: (s/n)").strip().lower()
+contra_correcte = input("Digues si és correcte: (s/n)").strip().lower()
+if compte_actiu !="s":
+    print("Accés denegat. Compte no actiu.")
+elif contra_correcte != "s":
+    print("Accés denegat. Contra no correcte.")
+else:
+    codi_correcte = input("Codi correcte: (s/n)").strip().lower()
+    if codi_correcte == "s":
+        print("Accés permés.")
+    else:
+        print("Accés denegat. Codi incorrecte.")
+
+
+# Exercici 13: Diagnòstic d'un router
+# Demana si el router està encès, si l'indicador LOS del terminal òptic està
+# encès i si l'indicador d'Internet del router està encès. Indica primer si
+# cal encendre el router; si ja està encès, comprova si cal revisar el cable
+# de fibra (LOS encès), si cal contactar amb el proveïdor (Internet apagat) o
+# si la connexió funciona correctament. Considera els casos en aquest ordre.
+router_ences = input("Router ences? (s/n)").strip().lower()
+if router_ences != "s":
+    print("Cal encendre el router")
+else:
+    indicador_los = input("Ences o no: (s/n)").strip().lower()
+    indicador_internet = input("Ences o no: (s/n)").strip().lower()
+    if indicador_los == "s":
+        print("Revisar cable")
+    elif indicador_internet != "s":
+        print("Contactar amb proveïdor")
+    else:
+        print("Funciona correctament")
+    
